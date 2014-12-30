@@ -1,0 +1,8 @@
+%h1 test
+- if session[:name]
+  %h2 Hello, #{session[:name]}!
+
+- if authorized?
+  = render "import"
+- else
+  = button_to "Auth with spotify", "/auth/spotify", class: "btn"

@@ -1,0 +1,11 @@
+%h2 Import
+%h3= flash[:notice]
+=form_tag "/import" do
+  .form-group
+    %label Playlist name
+    = text_field_tag :playlist_name, nil, class: "form-control"
+
+  .form-group
+    %label Url
+    = text_field_tag :url, nil, class: "form-control"
+    = submit_tag "Submit", class: "btn"
